@@ -248,17 +248,23 @@ return;
 }
 
 // Hello
-if(command.includes("hello") ||
-command.includes("hi")){
+if (
+    command.includes("hello") ||
+    command.includes("hi") ||
+    command.includes("hy") ||
+    command.includes("hlo") ||
+    command.includes("hey")
+) {
 
-addMessage(
-"bot",
-currentMode==="NOVA"
-?
-"😊 Hello Ankush! How can I help you today?"
-:
-"🤖 Greetings Ankush. Awaiting your command."
-);
+    addMessage(
+        "bot",
+        currentMode === "NOVA"
+        ? "😊 Hello Ankush! How can I help you today?"
+        : "🤖 Greetings Ankush. Awaiting your command."
+    );
+
+    return;
+}
 
 return;
 
@@ -268,8 +274,7 @@ return;
 
 addMessage(
 "bot",
-"I don't understand that command yet."
-);
+"sir kuch problem hai "
 
 showNotification("Ready");
 
