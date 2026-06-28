@@ -127,7 +127,11 @@ const text=userInput.value.trim();
 
 if(text==="") return;
 
-addMessage("user",text);
+addMessage("user", text);
+
+processCommand(text);
+
+userInput.value = "";
 
 
 userInput.value="";
@@ -248,7 +252,7 @@ return;
 
 // Hello
 if (
-    command.includes("hello") ||
+    command.includes("Jarvis") ||
     command.includes("hi") ||
     command.includes("hy") ||
     command.includes("hlo") ||
@@ -258,11 +262,9 @@ if (
     addMessage(
         "bot",
         currentMode === "NOVA"
-        ? "😊 Hello Ankush! How can I help you today?"
+        ? "😊 Hello sir ! How can I help you today?"
         : "🤖 Greetings Ankush. Awaiting your command."
-    );
-
-    return;
+    
 }
 
 return;
@@ -272,8 +274,13 @@ return;
 // Default Reply
 
 addMessage(
-"bot",
-"sir kuch problem hai "
+    "bot",
+    "Sir, kuch problem hai."
+);
+
+showNotification("Ready");
+
+}
 
 showNotification("Ready");
 
