@@ -1,1 +1,355 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JARVIS AI v2.0</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="app">
+
+<!-- ========================= -->
+<!-- Sidebar -->
+<!-- ========================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>JARVIS</h2>
+
+<p>Artificial Intelligence</p>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li class="active">
+<i class="fas fa-house"></i>
+<span>Home</span>
+</li>
+
+<li>
+<i class="fas fa-comments"></i>
+<span>Chat</span>
+</li>
+
+<li>
+<i class="fas fa-microphone"></i>
+<span>Voice</span>
+</li>
+
+<li>
+<i class="fas fa-brain"></i>
+<span>Memory</span>
+</li>
+
+<li>
+<i class="fas fa-gear"></i>
+<span>Settings</span>
+</li>
+
+</ul>
+
+</nav>
+
+<div class="user-card">
+
+<h3>Ankush</h3>
+
+<p>AI Developer</p>
+
+<div class="online">
+
+🟢 Online
+
+</div>
+
+</div>
+
+</aside>
+
+<!-- ========================= -->
+<!-- Main -->
+<!-- ========================= -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Welcome Back Ankush 👋</h1>
+
+<p>JARVIS Professional AI Assistant</p>
+
+</div>
+
+<div class="mode-switch">
+
+<button id="novaMode">
+
+NOVA
+
+</button>
+
+<button id="jarvisMode" class="active">
+
+JARVIS
+
+</button>
+
+</div>
+
+</header>
+<!-- ========================= -->
+<!-- Dashboard -->
+<!-- ========================= -->
+
+<section class="dashboard">
+
+<!-- AI Panel -->
+
+<div class="ai-panel">
+
+<div class="ai-core">
+
+<div class="ring ring1"></div>
+<div class="ring ring2"></div>
+<div class="ring ring3"></div>
+
+<div class="core">
+
+<h2>AI</h2>
+
+</div>
+
+</div>
+
+<div class="assistant-info">
+
+<h2 id="assistantName">
+
+JARVIS
+
+</h2>
+
+<p id="assistantStatus">
+
+System Online • Ready
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Clock -->
+
+<div class="clock-card">
+
+<h1 id="time">
+
+00:00:00
+
+</h1>
+
+<p id="date">
+
+Loading...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Chat Section -->
+<!-- ========================= -->
+
+<section class="chat-section">
+
+<div class="chat-box" id="chatBox">
+
+<div class="message bot">
+
+<div class="avatar">
+
+🤖
+
+</div>
+
+<div class="text">
+
+<b>JARVIS:</b><br><br>
+
+Welcome back Ankush.<br>
+
+All systems are online.<br>
+
+How may I assist you today?
+
+</div>
+
+</div>
+
+</div>
+
+<div class="input-area">
+
+<input
+type="text"
+id="userInput"
+placeholder="Type your command...">
+
+<button id="sendBtn">
+
+<i class="fas fa-paper-plane"></i>
+
+</button>
+
+<button id="micBtn">
+
+<i class="fas fa-microphone"></i>
+
+</button>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- Quick Actions -->
+<!-- ========================= -->
+
+<section class="quick-actions">
+
+<h2>Quick Actions</h2>
+
+<div class="cards">
+
+<div class="card" id="googleCard">
+<i class="fas fa-globe"></i>
+<p>Google Search</p>
+</div>
+
+<div class="card" id="youtubeCard">
+<i class="fab fa-youtube"></i>
+<p>YouTube</p>
+</div>
+
+<div class="card" id="weatherCard">
+<i class="fas fa-cloud-sun"></i>
+<p>Weather</p>
+</div>
+
+<div class="card" id="musicCard">
+<i class="fas fa-music"></i>
+<p>Music</p>
+</div>
+
+<div class="card" id="filesCard">
+<i class="fas fa-folder"></i>
+<p>Files</p>
+</div>
+
+<div class="card" id="toolsCard">
+<i class="fas fa-robot"></i>
+<p>AI Tools</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- System Status -->
+<!-- ========================= -->
+
+<section class="system-status">
+
+<h2>System Status</h2>
+
+<div class="status-grid">
+
+<div class="status-card">
+<i class="fas fa-microchip"></i>
+<h3>CPU</h3>
+<p id="cpuStatus">Normal</p>
+</div>
+
+<div class="status-card">
+<i class="fas fa-memory"></i>
+<h3>Memory</h3>
+<p id="memoryStatus">Ready</p>
+</div>
+
+<div class="status-card">
+<i class="fas fa-wifi"></i>
+<h3>Network</h3>
+<p id="networkStatus">Connected</p>
+</div>
+
+<div class="status-card">
+<i class="fas fa-shield-halved"></i>
+<h3>Security</h3>
+<p id="securityStatus">Protected</p>
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- Notifications -->
+<!-- ========================= -->
+
+<section class="notification-panel">
+
+<h2>Notifications</h2>
+
+<div id="notification">
+
+System Ready...
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+
+© 2026 JARVIS AI v2.0 | Developed by Ankush
+
+</p>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script src="brain.js"></script>
+<script src="voice.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
