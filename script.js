@@ -129,7 +129,6 @@ if(text==="") return;
 
 addMessage("user",text);
 
-processCommand(text);
 
 userInput.value="";
 
