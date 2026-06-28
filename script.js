@@ -272,16 +272,9 @@ return;
 }
 
 // Default Reply
-
 addMessage(
-    "bot",
-    "Sir, kuch problem hai."
-);
+"bot",
+"sir kuch problem hai "
 
 showNotification("Ready");
 
-}
-
-showNotification("Ready");
-
-}
