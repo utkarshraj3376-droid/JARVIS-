@@ -138,24 +138,33 @@ userInput.value="";
 
 };
 
-userInput.addEventListener("keypress",function(e){
+// =====================================
+// Part 3 - Send Message
+// =====================================
 
-if(e.key==="Enter"){
+sendBtn.onclick = function () {
 
-sendBtn.click();
+    const text = userInput.value.trim();
 
-}
+    if (text === "") return;
+
+    addMessage("user", text);
+
+    processCommand(text);
+
+    userInput.value = "";
+
+};
+
+userInput.addEventListener("keypress", function (e) {
+
+    if (e.key === "Enter") {
+
+        sendBtn.click();
+
+    }
 
 });
-
-
-else{
-
-addMessage("bot","I'm processing your request...");
-
-}
-
-}
 // =====================================
 // Part 4 - Google & YouTube Commands
 // =====================================
@@ -250,9 +259,11 @@ return;
 
 }
 
-// Hello
+// Hello 
+
 if (
-    command.includes("Jarvis") ||
+    command.includes("jarvis") ||
+    command.includes("hello") ||
     command.includes("hi") ||
     command.includes("hy") ||
     command.includes("hlo") ||
@@ -262,13 +273,11 @@ if (
     addMessage(
         "bot",
         currentMode === "NOVA"
-        ? "😊 Hello sir ! How can I help you today?"
-        : "🤖 Greetings Ankush. Awaiting your command."
-    
-}
+            ? "😊 Hello Sir! How can I help you today?"
+            : "🤖 Greetings Ankush. Awaiting your command."
+    );
 
-return;
-
+    return;
 }
 
 // Default Reply
