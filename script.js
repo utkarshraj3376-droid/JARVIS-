@@ -145,33 +145,6 @@ sendBtn.click();
 
 });
 
-// =====================================
-// AI Commands
-// =====================================
-
-function processCommand(command){
-
-command=command.toLowerCase();
-
-if(command.includes("hello") || command.includes("hi")){
-
-addMessage("bot","Hello Ankush 👋");
-
-showNotification("Greeting Sent");
-
-}
-
-else if(command.includes("time")){
-
-addMessage("bot","🕒 "+new Date().toLocaleTimeString());
-
-}
-
-else if(command.includes("date")){
-
-addMessage("bot","📅 "+new Date().toDateString());
-
-}
 
 else{
 
